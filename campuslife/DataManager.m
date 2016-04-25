@@ -184,7 +184,7 @@ void *saveCacheThread()
         int startDay = (int)event.startDay;
         currentKey = [DataManager getIndexStr:startMonth :startYear];
         currentMonth = [newMonthCache objectForKey:currentKey];
-        NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
+        //NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
         if (currentMonth == nil)
             currentMonth = [[MonthOfEvents alloc] initWithoutEvents:startMonth andYear:startYear];
         [newMonthCache setObject:currentMonth forKey:currentKey];
@@ -205,7 +205,8 @@ void *saveCacheThread()
             [keyList addObject:[DataManager getIndexStr:j :i]];
             //[keyList addObject:[CalendarInfo getDaysOfMonth:j ofYear:i]];
             //[daysList addObject:<#(nonnull id)#>]
-            
+            //Obviously we need to get the days for the given month from the Info class
+            //Not sure If I should complete this or not
             processDays([CalendarInfo getDaysOfMonth:j ofYear:i]);
         }
     }
