@@ -6,7 +6,6 @@
 //  Copyright © 2016 LCSC. All rights reserved.
 //
 #import <foundation/Foundation.h>
-//#import "ServerClient.h"
 #import "DataManager.h"
 #import "CalendarInfo.h"
 #import "JsonParser.h"
@@ -51,10 +50,7 @@ DataCache *dataCache = nil;
         dataCacheLock = [[NSLock alloc] init];
         time(&lastTime);
         time(&lastUpdate);
-        //serverClient = [[ServerClient alloc] init];
-        //[self maintainCache];
-        //[self getCache];
-        elapsedTime = 1000;
+        elapsedTime = 1000 + CACHE_UPDATE_INTERVAL; //this is ment to force a cacheRebuild
         error = pthread_create(&timeThreadStruct, NULL, timeHeartBeat, NULL );
         if (error)
         {
@@ -188,7 +184,7 @@ void *saveCacheThread()
         int startDay = (int)event.startDay;
         currentKey = [DataManager getIndexStr:startMonth :startYear];
         currentMonth = [newMonthCache objectForKey:currentKey];
-        NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
+        //NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
         if (currentMonth == nil)
             currentMonth = [[MonthOfEvents alloc] initWithoutEvents:startMonth andYear:startYear];
         [newMonthCache setObject:currentMonth forKey:currentKey];
@@ -209,7 +205,8 @@ void *saveCacheThread()
             [keyList addObject:[DataManager getIndexStr:j :i]];
             //[keyList addObject:[CalendarInfo getDaysOfMonth:j ofYear:i]];
             //[daysList addObject:<#(nonnull id)#>]
-            
+            //Obviously we need to get the days for the given month from the Info class
+            //Not sure If I should complete this or not
             processDays([CalendarInfo getDaysOfMonth:j ofYear:i]);
         }
     }
