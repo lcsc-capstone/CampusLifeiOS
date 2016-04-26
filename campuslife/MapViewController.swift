@@ -29,9 +29,18 @@ class MapViewController: UIViewController {
         sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
         sender.setTranslation(CGPointZero, inView: self.view)
     }
+    func bttnTouched(sender: UIBarButtonItem){
+        self.performSegueWithIdentifier("mapBackToMenu", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
+        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
+        go.setImage(titleImage, forState: .Normal)
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationItem.titleView = go
         //my code :)
         //loads the slide menu function
         menuButton.target = revealViewController()

@@ -26,6 +26,12 @@
 //fill the text fiel with the user information after loading the view
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
+    CGRect frameimg = CGRectMake(0,0,150,25);
+    UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
+    [Bttn setImage:titleImage forState:UIControlStateNormal];
+    [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = Bttn;
     //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundCollor")!)
     UIImage *img = [[UIImage alloc] init];
     img = [UIImage imageNamed:@"backgroundCollor"];
@@ -35,6 +41,10 @@
     NSString *username = [_auth getBlackBoardUsername];
     NSString *password = [_auth getBlackBoardPassword];
     [self changeDisplaytext:username andPassword:password];
+}
+-(void)bttTouched{
+    
+    [self performSegueWithIdentifier:@"blackBackToMenu" sender:self];
 }
 
 //Set the profile if it is valid

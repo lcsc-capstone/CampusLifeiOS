@@ -28,6 +28,7 @@
 
 @implementation DaySection
 
+
 -(id)initWithDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year events:(NSArray *)events
 {
     _eventsInDay = [[NSArray alloc] initWithArray:events];
@@ -56,8 +57,16 @@
 
 @implementation AllEventViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
+    CGRect frameimg = CGRectMake(0,0,150,25);
+    UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
+    [Bttn setImage:titleImage forState:UIControlStateNormal];
+    [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = Bttn;
     selectedIndex = nil;
     preferences = [Preferences getSharedInstance];
     _menuButton.target = [self revealViewController];
@@ -67,7 +76,10 @@
     [self loadMonths];
     self.tableView.rowHeight = 44;
 }
-
+-(void)bttTouched{
+    
+    [self performSegueWithIdentifier:@"eventBackToMenu" sender:self];
+}
 
 -(void)loadDaySections
 {

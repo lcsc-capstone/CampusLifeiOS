@@ -86,12 +86,21 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             }
         }
     }
+    func bttnTouched(sender: UIBarButtonItem){
+        self.performSegueWithIdentifier("profileBackToMenu", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
+        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
+        go.setImage(titleImage, forState: .Normal)
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationItem.titleView = go
         //my code :)
         menuButton.target = revealViewController()
-        menuButton.action = Selector("revealToggle:")
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true

@@ -28,6 +28,12 @@
 //fill the text fiel with the user information after loading the view
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
+    CGRect frameimg = CGRectMake(0,0,150,25);
+    UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
+    [Bttn setImage:titleImage forState:UIControlStateNormal];
+    [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = Bttn;
     // Do any additional setup after loading the view.
     
     UIImage *img = [[UIImage alloc] init];
@@ -40,6 +46,10 @@
     NSString *username = [_auth getWarriorWebUsername];
     NSString *password = [_auth getWarriorWebPassword];
     [self changeDisplaytext:username andPassword:password];
+}
+-(void)bttTouched{
+    
+    [self performSegueWithIdentifier:@"warriorBackToMenu" sender:self];
 }
 
 //clean the WW profile after tapping clear

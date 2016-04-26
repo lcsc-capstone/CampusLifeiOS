@@ -15,6 +15,9 @@
 
 -(void)viewDidLoad
 {
+    UIImageView* titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 25)];
+    [titleImage setImage:[UIImage imageNamed:@"Wordmark-Blue-Red-1"]];
+    self.navigationItem.titleView = titleImage;
     _menuButton.target = [self revealViewController];
     _menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:[[self revealViewController] panGestureRecognizer]];

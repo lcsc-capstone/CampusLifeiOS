@@ -15,11 +15,20 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webViewWindow: UIWebView!
 
+    func bttnTouched(sender: UIBarButtonItem){
+        self.performSegueWithIdentifier("backToMenu", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
+        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
+        go.setImage(titleImage, forState: .Normal)
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationItem.titleView = go
         menuButton.target = revealViewController()
-        menuButton.action = Selector("revealToggle:")
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())

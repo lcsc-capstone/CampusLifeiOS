@@ -353,14 +353,6 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="mZi-Dh-sgD"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="ExW-cg-6di"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9hC-Ef-H8H">
-                            <rect key="frame" x="214" y="0.5" width="172" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="7Qs-7Z-CIa"/>
-                            </connections>
-                        </button>
                         <rightBarButtonItems>
                             <barButtonItem image="down_arrow 2.png_16x16.png" id="SgT-8H-mbR">
                                 <connections>
@@ -494,14 +486,6 @@
                     <navigationItem key="navigationItem" id="Ymu-IQ-gLR">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="uaf-pi-IgB"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IbP-t6-fas">
-                            <rect key="frame" x="215" y="0.5" width="170" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="BZ3-uI-rKz"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title=" " id="fve-S2-ufy"/>
                     </navigationItem>
                 </tableViewController>
@@ -711,12 +695,11 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="DoT-Ze-2Bz"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="ufP-Uh-p0F"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bhB-gs-70c">
-                            <rect key="frame" x="214" y="0.5" width="172" height="43"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xD7-Gw-g3V">
+                            <rect key="frame" x="126" y="7" width="348" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
                             <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="z81-Mf-iQG"/>
+                                <action selector="bttTouched:" destination="PYI-sD-Pxi" eventType="touchUpInside" id="jbJ-mD-idb"/>
                             </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" image="down_arrow 2.png_16x16.png" id="wfR-cq-hNB">
@@ -730,6 +713,8 @@
                     <connections>
                         <outlet property="menuButton" destination="ufP-Uh-p0F" id="ES3-9h-RWY"/>
                         <outlet property="tableView" destination="zst-gA-ldo" id="250-hr-9wb"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="eventBackToMenu" id="Axa-9L-TIe"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" id="LXs-aj-3cB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIs-z4-GJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -740,7 +725,7 @@
         <scene sceneID="vbC-Ui-bsr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pcG-gU-rIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Events" image="4B56B1A0-1227-4877-9250-BAAFE40E7E3B" id="2J2-W4-Dwn"/>
+                    <tabBarItem key="tabBarItem" title="All Events" image="A2450E53-7F3C-48B0-98F1-73D4D6CD43BC" id="2J2-W4-Dwn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bgd-Eu-lYD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -759,7 +744,7 @@
         <scene sceneID="oWY-TB-3gO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uar-4W-Ymn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="3FD2E3D1-B522-4E8D-9EA2-E94F1A74093F" id="0QB-JS-ySv"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="3F1D5DD0-19C2-49A8-AE87-463E5650A946" id="0QB-JS-ySv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nr1-r4-eMJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -844,20 +829,19 @@
                     <navigationItem key="navigationItem" id="3fb-ki-jdR">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="7ed-yX-LLt"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YKW-Bu-YDz">
-                            <rect key="frame" x="218" y="0.5" width="164" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="Up1-lp-LdN"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ceL-rg-G8p">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="06b-sn-peh">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contactTableiPhone" destination="qz7-eQ-780" id="xLn-cz-sg6"/>
                         <outlet property="menuButton" destination="7ed-yX-LLt" id="fzN-kf-zLx"/>
                         <outlet property="tableView" destination="qz7-eQ-780" id="CCd-Hh-Bzd"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="contactBackToMenu" id="ABf-ua-jV6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4M-Rf-i5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -976,19 +960,18 @@
                     <navigationItem key="navigationItem" id="SqY-mZ-xBg">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="K0H-cg-LWc"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ebc-Ry-KIp">
-                            <rect key="frame" x="217" y="0.5" width="166" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="EyM-xF-9iq"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Tka-DG-hjl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uTS-WR-Paz">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="passwordDisplay" destination="ATr-aW-qFJ" id="kgE-ad-eev"/>
                         <outlet property="usernameDisplay" destination="1gM-eY-U7q" id="dMz-Ul-v9O"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="warriorBackToMenu" id="Sfm-EV-vHE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFD-9a-TBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1106,18 +1089,17 @@
                     <navigationItem key="navigationItem" id="lZg-Il-3Ow">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="pOX-SL-UdQ"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="agC-Dw-4M5">
-                            <rect key="frame" x="215" y="0.5" width="170" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="Gft-DM-7XW"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="g18-C6-1oM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZuJ-gI-y2U">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="passwordDisplay" destination="g4C-FD-Suj" id="zN2-qU-5EC"/>
                         <outlet property="usernameDisplay" destination="jJY-jd-gM2" id="B1G-aK-xfW"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="blackBackToMenu" id="CSI-Nf-hWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmG-md-xwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1297,14 +1279,6 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="RcD-u6-spL"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="onA-ev-vOi"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vgB-bC-ei5">
-                            <rect key="frame" x="208" y="0.5" width="184" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="CH1-MQ-r3a"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" title="📷" id="7kL-Xt-bxy">
                             <connections>
                                 <action selector="cameraButtonTapped:" destination="8p0-As-nXa" id="H8e-Aj-gvO"/>
@@ -1315,6 +1289,7 @@
                     <connections>
                         <outlet property="imageView" destination="vi4-rg-yNd" id="xN9-z5-TlS"/>
                         <outlet property="menuButton" destination="onA-ev-vOi" id="rMr-ni-7E8"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="profileBackToMenu" id="ggT-gU-3Ox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKf-ED-zgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1349,20 +1324,18 @@
                     <navigationItem key="navigationItem" id="Zgq-OY-GWw">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="FZW-QO-5o6"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="By4-nF-Tsr">
-                            <rect key="frame" x="211" y="0.5" width="178" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="Qdz-Q5-AAJ"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xtm-Au-3if">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eAS-TX-FIX">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="menuButton" destination="FZW-QO-5o6" id="YOC-Tt-P3K"/>
                         <outlet property="webViewWindow" destination="dJ0-4r-YJf" id="HgJ-a5-F7O"/>
-                        <segue destination="dLU-F8-34X" kind="presentation" identifier="backToMenu" animates="NO" id="cEJ-Bd-7vd"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="backToMenu" id="cEJ-Bd-7vd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoE-Pj-PKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1386,6 +1359,7 @@
                     <connections>
                         <segue destination="CWA-7e-eWE" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="kOx-mh-JTX"/>
                         <segue destination="kSZ-fJ-h9G" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="u0i-Tp-91u"/>
+                        <segue destination="2NP-px-NPR" kind="presentation" id="H0b-D0-ko1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGs-lo-EDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1416,13 +1390,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mw-HR-4LB">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="kSZ-fJ-h9G" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="S5c-Jq-kHc"/>
+                                            <segue destination="kSZ-fJ-h9G" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="S5c-Jq-kHc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="kdl-4C-Ozs">
@@ -1438,7 +1412,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXp-ZU-Vbt">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1460,7 +1434,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LCSC Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTq-ZV-gNH">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1479,7 +1453,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Athletics Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co3-ce-7KA">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="athletics icon" translatesAutoresizingMaskIntoConstraints="NO" id="BgA-3Q-F6M">
@@ -1504,7 +1478,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LCMail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-Xk-3mq">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1526,7 +1500,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blackboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-4R-ZYG">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1549,7 +1523,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hangouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kR-vk-OGe">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1571,7 +1545,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warrior Web" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WW-ph-kHq">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1593,7 +1567,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-kS-L2f">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1615,7 +1589,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmA-nR-ZBJ">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1637,7 +1611,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LiveStream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myj-Cx-R1h">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1659,7 +1633,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-Lk-H9t">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1681,7 +1655,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-jL-web">
                                                     <rect key="frame" x="32" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1758,13 +1732,14 @@
                     <navigationItem key="navigationItem" id="9kl-W2-Zju">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="kuZ-6N-IbZ"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YLZ-CX-x4S">
-                            <rect key="frame" x="219.5" y="0.5" width="161" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="1eC-Gh-BIz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DMq-DX-h4a">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="menuButton" destination="kuZ-6N-IbZ" id="HSt-rd-VXd"/>
                         <segue destination="6LN-i4-Wh9" kind="custom" identifier="Profile Alert" customClass="SWRevealViewControllerSeguePushController" id="N10-VH-H3Z"/>
@@ -1835,29 +1810,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="leading" secondItem="R26-8H-BsD" secondAttribute="leading" id="AEQ-k9-dPN"/>
-                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="top" secondItem="tHG-MB-xv4" secondAttribute="bottom" id="Sau-zr-d6K"/>
-                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="bottom" secondItem="lg2-RY-jC3" secondAttribute="top" id="ke0-61-EjO"/>
-                            <constraint firstAttribute="trailing" secondItem="zsF-5P-Sy7" secondAttribute="trailing" id="zkz-A3-H1h"/>
+                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="top" secondItem="tHG-MB-xv4" secondAttribute="bottom" id="2uU-DO-TIl"/>
+                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="leading" secondItem="R26-8H-BsD" secondAttribute="leading" id="J38-xG-eya"/>
+                            <constraint firstAttribute="trailing" secondItem="zsF-5P-Sy7" secondAttribute="trailing" id="bMG-Cf-Fwf"/>
+                            <constraint firstItem="zsF-5P-Sy7" firstAttribute="bottom" secondItem="lg2-RY-jC3" secondAttribute="top" id="tbZ-Mj-cdX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLf-dc-wVC">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="vr4-Ni-45l"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oB5-A9-lu0">
-                            <rect key="frame" x="207" y="0.5" width="186" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Wordmark-Blue-Red-2"/>
-                            <connections>
-                                <segue destination="dLU-F8-34X" kind="presentation" id="JtG-If-KkG"/>
-                            </connections>
-                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2XS-oV-KDs">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XNK-4g-NrC">
+                                <rect key="frame" x="560" y="7" width="20" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageView" destination="zsF-5P-Sy7" id="8ce-9d-YLw"/>
                         <outlet property="menuButton" destination="vr4-Ni-45l" id="P3l-6h-Cmx"/>
                         <outlet property="panView" destination="zsF-5P-Sy7" id="u9Q-jL-3uO"/>
                         <outlet property="pinchView" destination="zsF-5P-Sy7" id="73e-Mm-6RE"/>
+                        <segue destination="dLU-F8-34X" kind="presentation" identifier="mapBackToMenu" id="1Q3-Nw-w5B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nab-Hc-cTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2074,7 +2049,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3FD2E3D1-B522-4E8D-9EA2-E94F1A74093F" width="32" height="32">
+        <image name="3F1D5DD0-19C2-49A8-AE87-463E5650A946" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2212,7 +2187,7 @@ NwBFAEsAVABbAGgAbwB3AHkAfgCAAIIAhwCSAJQAlgCYAJ0AoACiAKQApgCoAK0AxADGAMgd2h3fHeod
 AAAAAAAAPgAAAAAAAAAAAAAAAAAAHqc
 </mutableData>
         </image>
-        <image name="4B56B1A0-1227-4877-9250-BAAFE40E7E3B" width="32" height="32">
+        <image name="A2450E53-7F3C-48B0-98F1-73D4D6CD43BC" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2334,7 +2309,6 @@ AAAAABocA
         <image name="Default-667h.png" width="375" height="667"/>
         <image name="IkidL" width="2000" height="2625"/>
         <image name="RCH_Resized" width="900" height="675"/>
-        <image name="Wordmark-Blue-Red-2" width="150" height="25"/>
         <image name="athletics icon" width="32" height="32"/>
         <image name="bbIcon" width="52" height="52"/>
         <image name="calendar-icon.png" width="16" height="16"/>
@@ -2358,10 +2332,11 @@ AAAAABocA
         <image name="warrior-web-icon.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j4T-2R-tpU"/>
-        <segue reference="oCQ-j1-dkC"/>
-        <segue reference="JtG-If-KkG"/>
-        <segue reference="VTb-fU-9WP"/>
+        <segue reference="TI8-V3-PE9"/>
+        <segue reference="Sfm-EV-vHE"/>
+        <segue reference="N10-VH-H3Z"/>
+        <segue reference="H0b-D0-ko1"/>
         <segue reference="S5c-Jq-kHc"/>
+        <segue reference="j4T-2R-tpU"/>
     </inferredMetricsTieBreakers>
 </document>

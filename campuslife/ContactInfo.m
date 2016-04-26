@@ -23,6 +23,12 @@
 }
 - (void)viewDidLoad {
 
+    UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
+    CGRect frameimg = CGRectMake(0,0,150,25);
+    UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
+    [Bttn setImage:titleImage forState:UIControlStateNormal];
+    [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = Bttn;
     self.view.backgroundColor = [UIColor whiteColor];
     _menuButton.target = [self revealViewController];
     _menuButton.action = @selector(revealToggle:);
@@ -53,6 +59,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+-(void)bttTouched{
+    [self performSegueWithIdentifier:@"contactBackToMenu" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
