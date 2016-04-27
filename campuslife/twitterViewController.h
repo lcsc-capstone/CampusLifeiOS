@@ -13,4 +13,5 @@
 #import <TwitterKit/TwitterKit.h>
 
 @interface twitterViewController : TWTRTimelineViewController
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @end
