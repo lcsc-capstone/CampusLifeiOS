@@ -692,16 +692,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MAy-EH-2mP">
-                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="DoT-Ze-2Bz"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="ufP-Uh-p0F"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xD7-Gw-g3V">
-                            <rect key="frame" x="126" y="7" width="348" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="bttTouched:" destination="PYI-sD-Pxi" eventType="touchUpInside" id="jbJ-mD-idb"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" image="down_arrow 2.png_16x16.png" id="wfR-cq-hNB">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -1322,7 +1314,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zgq-OY-GWw">
-                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="FZW-QO-5o6"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Xtm-Au-3if">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eAS-TX-FIX">
@@ -1564,7 +1555,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WarriorOne Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvH-W4-3KH">
                                                     <rect key="frame" x="33" y="11" width="394" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warrior-one-card-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="K0w-4h-Tnz">
@@ -1586,7 +1577,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdQ-Dy-2V8">
                                                     <rect key="frame" x="33" y="11" width="355" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="campus-news-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="c4Y-si-fqw">
@@ -2351,6 +2342,7 @@ NwBFAEsAVABbAGgAbwB3AHkAfgCAAIIAhwCSAJQAlgCYAJ0AoACiAKQApgCoAK0AxADGAMgd2h3fHeod
 AAAAAAAAPgAAAAAAAAAAAAAAAAAAHqc
 </mutableData>
         </image>
+        <image name="Default-667h.png" width="375" height="667"/>
         <image name="IkidL" width="2000" height="2625"/>
         <image name="RCH_Resized" width="900" height="675"/>
         <image name="athletics icon" width="32" height="32"/>
@@ -2383,6 +2375,7 @@ AAAAAAAAPgAAAAAAAAAAAAAAAAAAHqc
         <segue reference="H0b-D0-ko1"/>
         <segue reference="VTb-fU-9WP"/>
         <segue reference="S5c-Jq-kHc"/>
+        <segue reference="TI8-V3-PE9"/>
         <segue reference="j4T-2R-tpU"/>
     </inferredMetricsTieBreakers>
 </document>
