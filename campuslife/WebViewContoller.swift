@@ -46,6 +46,8 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "LiveStream": urlText = "http://livestream.com/accounts/8399277"
             case "Facebook": urlText = "https://www.facebook.com/LewisClarkState"
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
+            case "WarriorOne Card": urlText = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
+            case "Campus News": urlText = "http://www.lcsc.edu/news"
             default: return
         }
         
