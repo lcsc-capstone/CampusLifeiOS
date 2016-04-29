@@ -54,6 +54,7 @@
 		8409A21F1CD3E6A4006792FF /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21C1CD3E6A4006792FF /* home-icon.png */; };
 		8409A2201CD3E6A4006792FF /* lc-website-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21D1CD3E6A4006792FF /* lc-website-icon.png */; };
 		8409A2211CD3E6A4006792FF /* lcmail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21E1CD3E6A4006792FF /* lcmail-icon.png */; };
+		8409A2231CD3E76C006792FF /* add-to-calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */; };
 		991048FB1A1E656100C83570 /* ContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 991048FA1A1E656100C83570 /* ContactInfo.m */; };
 		9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9916368119F829BB007F7E47 /* AllEventViewController.m */; };
 		992592AE19FDC46B008946F8 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9925929D19FDC46B008946F8 /* Icon-60@2x.png */; };
@@ -187,6 +188,7 @@
 		8409A21C1CD3E6A4006792FF /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/home-icon.png"; sourceTree = "<group>"; };
 		8409A21D1CD3E6A4006792FF /* lc-website-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lc-website-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/lc-website-icon.png"; sourceTree = "<group>"; };
 		8409A21E1CD3E6A4006792FF /* lcmail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lcmail-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/lcmail-icon.png"; sourceTree = "<group>"; };
+		8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-to-calendar-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/add-to-calendar-icon.png"; sourceTree = "<group>"; };
 		991048F91A1E656100C83570 /* ContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfo.h; sourceTree = "<group>"; };
 		991048FA1A1E656100C83570 /* ContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfo.m; sourceTree = "<group>"; };
 		9916368119F829BB007F7E47 /* AllEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventViewController.m; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		402F77751CC80145001E8153 /* menu-icons */ = {
 			isa = PBXGroup;
 			children = (
+				8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */,
 				8409A21C1CD3E6A4006792FF /* home-icon.png */,
 				8409A21D1CD3E6A4006792FF /* lc-website-icon.png */,
 				8409A21E1CD3E6A4006792FF /* lcmail-icon.png */,
@@ -625,6 +628,7 @@
 				C1DEC8CD18F4AC2700ECD591 /* dotAthletics.png in Resources */,
 				403DDE811CBC1CDA009F2950 /* facebook_icon.png_32x32.png in Resources */,
 				99A5808E1A0048E70044CA5E /* Default-568h@2x.png in Resources */,
+				8409A2231CD3E76C006792FF /* add-to-calendar-icon.png in Resources */,
 				992592BE19FDC46B008946F8 /* iTunesArtwork@2x.png in Resources */,
 				C1DEC8CB18F4AC2700ECD591 /* dotAcademics.png in Resources */,
 				402F77801CC80145001E8153 /* map-icon.png in Resources */,
