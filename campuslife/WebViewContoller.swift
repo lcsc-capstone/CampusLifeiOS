@@ -8,15 +8,28 @@
 
 import UIKit
 
+
+//This class is responsible for the webView used to some of the itens in the menu
 class WebViewContoller: UIViewController, UIWebViewDelegate {
    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    
     @IBOutlet weak var webViewWindow: UIWebView!
 
+    //Load the main Apps's main page when this button is touched
     func bttnTouched(sender: UIBarButtonItem){
         self.performSegueWithIdentifier("backToMenu", sender: nil)
+    }
+    
+    
+    //opens an App's with an deeplink as paramenter
+    func openAppDeepLink(deepLinkString: String){
+        let appURL = NSURL(string: deepLinkString)
+        if UIApplication.sharedApplication().canOpenURL(appURL!){
+            UIApplication.sharedApplication().openURL(appURL!)
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/gmail-email-from-google/id422689480?mt=8")!)
+        }
     }
     
     override func viewDidLoad() {
@@ -27,11 +40,14 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
         go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.navigationItem.titleView = go
+        //menu button, tap and pan gestures functionalities
         menuButton.target = revealViewController()
         menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        //opens apps or an URL according to the view's tittle
         var urlText = ""
         let title = self.navigationController!.title!
         switch title{
@@ -39,7 +55,7 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "Hangouts": urlText = "https://hangouts.google.com"
             case "Athletics": urlText = "http://www.lcwarriors.com"
             case "WarriorWeb": urlText = "https://warriorwebss.lcsc.edu/Student/Account/Login?ReturnUrl=%2fStudent%2fPlanning%2fDegreePlans"
-            case "LCMail": urlText = "http://mail.google.com/a/lcmail.lcsc.edu"
+            case "LCMail": openAppDeepLink("googlegmail://")
             case "BlackBoard": urlText = "https://lcsc.blackboard.com/"
             case "Twitter": urlText = "http://twitter.com/LCSC"
             case "Radio": urlText = "http://stream.lcsc.edu/iphone.htm"
@@ -51,20 +67,28 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             default: return
         }
         
+        
+        //fix issue with LCSC's radio page that loads the page too small
         if title != "Radio"{
             webViewWindow.scalesPageToFit = true
         }
         
+        
+        //opens URL in webview
         webViewWindow?.delegate = self
         let url = NSURL(string: urlText)
         let request = NSURLRequest(URL: url!)
         webViewWindow?.loadRequest(request)
-       if title == "Hangouts"{
-        performSegueWithIdentifier("backToMenu", sender: self)
+        //returns the app to the home view in case the operation called is "Hangouts" or "LCMail"
+       if title == "Hangouts" || title == "LCMail"{
+            performSegueWithIdentifier("backToMenu", sender: self)
         }
     }
     
+    
+    
     func webViewDidFinishLoad(webView: UIWebView) {
+        //runs an script according to the url
         let script = ScriptWebView()
         let currentURL = (webView.request?.URL!.absoluteString)!
        webView.stringByEvaluatingJavaScriptFromString(script.getScript(currentURL))

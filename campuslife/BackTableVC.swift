@@ -22,12 +22,11 @@ class BackTableVC: UITableViewController {
         self.tableView.tableFooterView = UIView()
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destination = segue.destinationViewController as? UINavigationController{
             let title = segue.identifier
             destination.title = title
         }
     }
-    
+
 }
