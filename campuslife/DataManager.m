@@ -192,26 +192,6 @@ void *saveCacheThread()
     }
     return newMonthCache;
 }
-
-//Not used for now
-+(NSMutableArray*)getMonthKeys:(LCSCEvent*)event  :(void (^)(int days))processDays
-{
-    NSMutableArray *keyList = [[NSMutableArray alloc] init];
-    //int daysInMonth;
-    for(int i = (int)event.startYear; i <= event.endYear; i++)
-    {
-        for (int j = (int)event.startMonth; j<=((i ==event.endYear) ? event.endMonth : 12); j++)
-        {
-            [keyList addObject:[DataManager getIndexStr:j :i]];
-            //[keyList addObject:[CalendarInfo getDaysOfMonth:j ofYear:i]];
-            //[daysList addObject:<#(nonnull id)#>]
-            //Obviously we need to get the days for the given month from the Info class
-            //Not sure If I should complete this or not
-            processDays([CalendarInfo getDaysOfMonth:j ofYear:i]);
-        }
-    }
-    return keyList;
-}
 +(NSString *)getIndexStr:(NSInteger)month :(NSInteger)year
 {
     return [NSString stringWithFormat:@"%ld-%ld", (long)year, (long)month];
