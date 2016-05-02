@@ -21,13 +21,11 @@
 		401843E91CCE9424002D1B07 /* campus-news-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 401843E71CCE9424002D1B07 /* campus-news-icon.png */; };
 		401843EA1CCE9424002D1B07 /* warrior-one-card-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 401843E81CCE9424002D1B07 /* warrior-one-card-icon.png */; };
 		402F777D1CC80145001E8153 /* calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77761CC80145001E8153 /* calendar-icon.png */; };
-		402F777F1CC80145001E8153 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77781CC80145001E8153 /* home-icon.png */; };
 		402F77801CC80145001E8153 /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77791CC80145001E8153 /* map-icon.png */; };
 		402F77811CC80145001E8153 /* phone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F777A1CC80145001E8153 /* phone-icon.png */; };
 		402F77821CC80145001E8153 /* radio-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F777B1CC80145001E8153 /* radio-icon.png */; };
 		402F77831CC80145001E8153 /* warrior-web-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F777C1CC80145001E8153 /* warrior-web-icon.png */; };
 		402F77851CC804C3001E8153 /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77841CC804C3001E8153 /* camera-icon.png */; };
-		402F77881CC8063C001E8153 /* lcmail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77861CC8063C001E8153 /* lcmail-icon.png */; };
 		402F77891CC8063C001E8153 /* lcsc-athletics-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F77871CC8063C001E8153 /* lcsc-athletics-icon.png */; };
 		402F778B1CC806B9001E8153 /* hangouts-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F778A1CC806B9001E8153 /* hangouts-icon.png */; };
 		403DDE761CB9DF72009F2950 /* down_arrow 2.png_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 403DDE731CB9DF72009F2950 /* down_arrow 2.png_16x16.png */; };
@@ -53,6 +51,10 @@
 		44A8E2BF1CA1E11600C4435D /* BlackBoardProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */; };
 		44DF21581C99DD36003A0C3A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DF21571C99DD36003A0C3A /* MapViewController.swift */; };
 		44EAFBD31CA31AD800BE6200 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */; };
+		8409A21F1CD3E6A4006792FF /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21C1CD3E6A4006792FF /* home-icon.png */; };
+		8409A2201CD3E6A4006792FF /* lc-website-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21D1CD3E6A4006792FF /* lc-website-icon.png */; };
+		8409A2211CD3E6A4006792FF /* lcmail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A21E1CD3E6A4006792FF /* lcmail-icon.png */; };
+		8409A2231CD3E76C006792FF /* add-to-calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */; };
 		991048FB1A1E656100C83570 /* ContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 991048FA1A1E656100C83570 /* ContactInfo.m */; };
 		9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9916368119F829BB007F7E47 /* AllEventViewController.m */; };
 		992592AE19FDC46B008946F8 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9925929D19FDC46B008946F8 /* Icon-60@2x.png */; };
@@ -144,13 +146,11 @@
 		401843E71CCE9424002D1B07 /* campus-news-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "campus-news-icon.png"; sourceTree = "<group>"; };
 		401843E81CCE9424002D1B07 /* warrior-one-card-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warrior-one-card-icon.png"; sourceTree = "<group>"; };
 		402F77761CC80145001E8153 /* calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-icon.png"; sourceTree = "<group>"; };
-		402F77781CC80145001E8153 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon.png"; sourceTree = "<group>"; };
 		402F77791CC80145001E8153 /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon.png"; sourceTree = "<group>"; };
 		402F777A1CC80145001E8153 /* phone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-icon.png"; sourceTree = "<group>"; };
 		402F777B1CC80145001E8153 /* radio-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-icon.png"; sourceTree = "<group>"; };
 		402F777C1CC80145001E8153 /* warrior-web-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warrior-web-icon.png"; sourceTree = "<group>"; };
 		402F77841CC804C3001E8153 /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
-		402F77861CC8063C001E8153 /* lcmail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lcmail-icon.png"; sourceTree = "<group>"; };
 		402F77871CC8063C001E8153 /* lcsc-athletics-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lcsc-athletics-icon.png"; sourceTree = "<group>"; };
 		402F778A1CC806B9001E8153 /* hangouts-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangouts-icon.png"; sourceTree = "<group>"; };
 		403DDE731CB9DF72009F2950 /* down_arrow 2.png_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_arrow 2.png_16x16.png"; sourceTree = "<group>"; };
@@ -185,6 +185,10 @@
 		44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackBoardProfileViewController.m; sourceTree = "<group>"; };
 		44DF21571C99DD36003A0C3A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8409A21C1CD3E6A4006792FF /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/home-icon.png"; sourceTree = "<group>"; };
+		8409A21D1CD3E6A4006792FF /* lc-website-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lc-website-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/lc-website-icon.png"; sourceTree = "<group>"; };
+		8409A21E1CD3E6A4006792FF /* lcmail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lcmail-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/lcmail-icon.png"; sourceTree = "<group>"; };
+		8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-to-calendar-icon.png"; path = "../../../../../Downloads/menu-icons-and-stuff/add-to-calendar-icon.png"; sourceTree = "<group>"; };
 		991048F91A1E656100C83570 /* ContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfo.h; sourceTree = "<group>"; };
 		991048FA1A1E656100C83570 /* ContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfo.m; sourceTree = "<group>"; };
 		9916368119F829BB007F7E47 /* AllEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventViewController.m; sourceTree = "<group>"; };
@@ -291,15 +295,17 @@
 		402F77751CC80145001E8153 /* menu-icons */ = {
 			isa = PBXGroup;
 			children = (
+				8409A2221CD3E76C006792FF /* add-to-calendar-icon.png */,
+				8409A21C1CD3E6A4006792FF /* home-icon.png */,
+				8409A21D1CD3E6A4006792FF /* lc-website-icon.png */,
+				8409A21E1CD3E6A4006792FF /* lcmail-icon.png */,
 				401843E71CCE9424002D1B07 /* campus-news-icon.png */,
 				401843E81CCE9424002D1B07 /* warrior-one-card-icon.png */,
 				40F73D231C91348300A75F72 /* menu.png */,
-				402F77861CC8063C001E8153 /* lcmail-icon.png */,
 				402F77871CC8063C001E8153 /* lcsc-athletics-icon.png */,
 				402F778A1CC806B9001E8153 /* hangouts-icon.png */,
 				402F77841CC804C3001E8153 /* camera-icon.png */,
 				402F77761CC80145001E8153 /* calendar-icon.png */,
-				402F77781CC80145001E8153 /* home-icon.png */,
 				402F77791CC80145001E8153 /* map-icon.png */,
 				402F777A1CC80145001E8153 /* phone-icon.png */,
 				402F777B1CC80145001E8153 /* radio-icon.png */,
@@ -601,6 +607,7 @@
 				C1DEC8D018F4AC2700ECD591 /* dotCampusRec.png in Resources */,
 				401843EA1CCE9424002D1B07 /* warrior-one-card-icon.png in Resources */,
 				4071E6561C925655002E0D8E /* TwitterKitResources.bundle in Resources */,
+				8409A2201CD3E6A4006792FF /* lc-website-icon.png in Resources */,
 				99A580931A0048E70044CA5E /* Default-Portrait-736h@3x.png in Resources */,
 				99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */,
 				992592B219FDC46B008946F8 /* Icon-76.png in Resources */,
@@ -610,9 +617,7 @@
 				402F778B1CC806B9001E8153 /* hangouts-icon.png in Resources */,
 				C10BC49A18AD8C5D004C91CD /* newAlphaCircle.png in Resources */,
 				997451A21A38D81500EA9B7C /* phone2-32.png in Resources */,
-				402F77881CC8063C001E8153 /* lcmail-icon.png in Resources */,
 				992592BD19FDC46B008946F8 /* Icon@2x.png in Resources */,
-				402F777F1CC80145001E8153 /* home-icon.png in Resources */,
 				9995B92B1A2BF488004C08C9 /* university-32.png in Resources */,
 				402F77811CC80145001E8153 /* phone-icon.png in Resources */,
 				402F77851CC804C3001E8153 /* camera-icon.png in Resources */,
@@ -623,12 +628,14 @@
 				C1DEC8CD18F4AC2700ECD591 /* dotAthletics.png in Resources */,
 				403DDE811CBC1CDA009F2950 /* facebook_icon.png_32x32.png in Resources */,
 				99A5808E1A0048E70044CA5E /* Default-568h@2x.png in Resources */,
+				8409A2231CD3E76C006792FF /* add-to-calendar-icon.png in Resources */,
 				992592BE19FDC46B008946F8 /* iTunesArtwork@2x.png in Resources */,
 				C1DEC8CB18F4AC2700ECD591 /* dotAcademics.png in Resources */,
 				402F77801CC80145001E8153 /* map-icon.png in Resources */,
 				99A580961A0048E70044CA5E /* Default.png in Resources */,
 				992592B519FDC46B008946F8 /* Icon-Small-40.png in Resources */,
 				99F6C3DB1A441A920041328A /* date_to-32.png in Resources */,
+				8409A2211CD3E6A4006792FF /* lcmail-icon.png in Resources */,
 				992592B119FDC46B008946F8 /* Icon-72@2x.png in Resources */,
 				9941899419E4F81D00D6AED4 /* calendar-32.png in Resources */,
 				99A5808F1A0048E70044CA5E /* Default-667h@2x.png in Resources */,
@@ -657,6 +664,7 @@
 				403FF13B1CB7629400699436 /* Main.storyboard in Resources */,
 				992592B319FDC46B008946F8 /* Icon-76@2x.png in Resources */,
 				992592BC19FDC46B008946F8 /* Icon.png in Resources */,
+				8409A21F1CD3E6A4006792FF /* home-icon.png in Resources */,
 				992592BB19FDC46B008946F8 /* Icon-Small@3x.png in Resources */,
 				C105A2A018B6A992007C841C /* bigAlphaCircle.png in Resources */,
 			);

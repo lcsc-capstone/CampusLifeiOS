@@ -611,16 +611,6 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cE-h6-XQK">
-                                                    <rect key="frame" x="559" y="5" width="33" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="33" id="nVa-51-bJb"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="date_to-32.png"/>
-                                                    <connections>
-                                                        <action selector="AddEventToCal:" destination="iE4-KC-0DC" eventType="touchUpInside" id="soR-ey-ZyN"/>
-                                                    </connections>
-                                                </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-po-j3s">
                                                     <rect key="frame" x="0.0" y="51" width="600" height="199"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -638,6 +628,16 @@
                                                         <constraint firstAttribute="height" constant="16" id="fhn-Fs-Ufg"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cE-h6-XQK">
+                                                    <rect key="frame" x="559" y="5" width="33" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="33" id="nVa-51-bJb"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="add-to-calendar-icon.png"/>
+                                                    <connections>
+                                                        <action selector="AddEventToCal:" destination="iE4-KC-0DC" eventType="touchUpInside" id="soR-ey-ZyN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Siz-Wi-ZeC" firstAttribute="top" secondItem="c4O-mm-oWy" secondAttribute="topMargin" constant="14" id="3xa-Xp-PTJ"/>
@@ -1419,7 +1419,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lcscBackgroud" translatesAutoresizingMaskIntoConstraints="NO" id="poI-V2-28L">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lc-website-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="poI-V2-28L">
                                                     <rect key="frame" x="8" y="14" width="16" height="16"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LCSC Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTq-ZV-gNH">
@@ -2347,6 +2347,7 @@ AAAAABocA
         </image>
         <image name="IkidL" width="2000" height="2625"/>
         <image name="RCH_Resized" width="900" height="675"/>
+        <image name="add-to-calendar-icon.png" width="32" height="32"/>
         <image name="athletics icon" width="32" height="32"/>
         <image name="bbIcon" width="52" height="52"/>
         <image name="calendar-icon.png" width="16" height="16"/>
@@ -2359,8 +2360,8 @@ AAAAABocA
         <image name="hangouts-icon.png" width="16" height="16"/>
         <image name="home-icon.png" width="16" height="16"/>
         <image name="insta_icon_32x32.png" width="32" height="32"/>
+        <image name="lc-website-icon.png" width="16" height="16"/>
         <image name="lcmail-icon.png" width="16" height="16"/>
-        <image name="lcscBackgroud" width="300" height="369"/>
         <image name="map-icon.png" width="16" height="16"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="newAlphaCircle.png" width="13" height="13"/>
@@ -2377,6 +2378,7 @@ AAAAABocA
         <segue reference="TI8-V3-PE9"/>
         <segue reference="H0b-D0-ko1"/>
         <segue reference="S5c-Jq-kHc"/>
+        <segue reference="VTb-fU-9WP"/>
         <segue reference="j4T-2R-tpU"/>
     </inferredMetricsTieBreakers>
 </document>
