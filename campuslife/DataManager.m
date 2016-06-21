@@ -27,6 +27,7 @@ pthread_t timeThreadStruct;
 pthread_t saveCacheThreadStruct;
 NSLock *timeLock;
 NSLock *dataCacheLock;
+NSLock *saveCacheLock;
 bool timeKeeperActive = true;
 bool error = false;
 double elapsedTime = 0.0;
@@ -48,6 +49,7 @@ DataCache *dataCache = nil;
     {
         timeLock = [[NSLock alloc] init];
         dataCacheLock = [[NSLock alloc] init];
+
         time(&lastTime);
         time(&lastUpdate);
         elapsedTime = 1000 + CACHE_UPDATE_INTERVAL; //this is ment to force a cacheRebuild
@@ -77,12 +79,11 @@ void *timeHeartBeat()
 }
 -(void) maintainCache
 {
-    [dataCacheLock lock];
     elapsedTime = 0;
     time(&currentTime);
     if (dataCache == nil)
     {
-        [self rebuildCache];
+        [DataManager buildCache];
         dataCache.lastUpdated = time(NULL);
         [self saveCache];
         [dataCacheLock unlock];
@@ -90,15 +91,15 @@ void *timeHeartBeat()
     }
     if (difftime(currentTime, dataCache.lastUpdated) > CACHE_UPDATE_INTERVAL)
     {
-        [self rebuildCache];
-        dataCache.lastUpdated = time(NULL);
+        [DataManager buildCache];
         [self saveCache];
     }
-    [dataCacheLock unlock];
 }
 -(void)saveCache
 {
+    [saveCacheLock lock];
     error = pthread_create(&saveCacheThreadStruct, NULL, saveCacheThread, NULL );
+    [saveCacheLock unlock];
 }
 void *saveCacheThread()
 {
@@ -120,10 +121,49 @@ void *saveCacheThread()
     }
     return 0;
 }
-- (NSMutableDictionary*)rebuildCache
+
++(NSMutableDictionary *) buildCache
 {
-    dataCache = nil; //see getCache to understand this
-    return [self getCache];
+    [dataCacheLock lock];
+    NSInteger startMonth = [CalendarInfo getCurrentMonth];
+    NSInteger endMonth = startMonth;
+    NSInteger startYear = [CalendarInfo getCurrentYear];
+    NSInteger endYear = startYear;
+    //NSInteger startDay, endDay = [CalendarInfo getCurrentDay];
+    for (int i = 0; i < 6; i++) {
+        [CalendarInfo incrementMonth:&endMonth :&endYear];
+        //[CalendarInfo decrementMonth:&startMonth :&startYear];
+    }
+    dataCache = [[DataCache alloc] init];
+    dataCache.monthCache = [DataManager buildCache:startMonth andYear:startYear
+                                           toMonth:endMonth andYear:endYear];
+    dataCache.lastUpdated = time(NULL);
+    [dataCacheLock unlock];
+    return [dataCache monthCache];
+}
++(NSMutableDictionary *) buildCache:(NSInteger)startMonth andYear:(NSInteger) startYear
+                            toMonth:(NSInteger) endMonth andYear:(NSInteger)endYear
+{
+    
+    NSMutableDictionary *newMonthCache = [[NSMutableDictionary alloc] init];
+    NSMutableArray *events = (NSMutableArray *)[JsonParser loadEventsFromMonth:startMonth andYear:startYear
+                                                                        toMonth:endMonth andYear:endYear];
+    MonthOfEvents *currentMonth;
+    NSString *currentKey;
+    for(LCSCEvent *event in events)
+    {
+        int startYear = (int)event.startYear;
+        int startMonth = (int)event.startMonth;
+        int startDay = (int)event.startDay;
+        currentKey = [DataManager getIndexStr:startMonth :startYear];
+        currentMonth = [newMonthCache objectForKey:currentKey];
+        //NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
+        if (currentMonth == nil)
+            currentMonth = [[MonthOfEvents alloc] initWithoutEvents:startMonth andYear:startYear];
+        [newMonthCache setObject:currentMonth forKey:currentKey];
+        [currentMonth addEvent:event toDay:startDay];
+    }
+    return newMonthCache;
 }
 - (NSMutableDictionary*)getCache
 {
@@ -146,52 +186,16 @@ void *saveCacheThread()
     if (version == CACHE_VERSION)
     {
         dataCache = (DataCache*)[unarchiver decodeObjectForKey:@"MonthCache"];
-        //check to see if cache is updated.
+        if(difftime(time(NULL), dataCache.lastUpdated) > CACHE_UPDATE_INTERVAL)
+        {
+            [self saveCache];
+            return [DataManager buildCache];
+        }
         return [dataCache monthCache];
     }
     return [DataManager buildCache];
 }
 
-+(NSMutableDictionary *) buildCache
-{
-    NSInteger startMonth = [CalendarInfo getCurrentMonth];
-    NSInteger endMonth = startMonth;
-    NSInteger startYear = [CalendarInfo getCurrentYear];
-    NSInteger endYear = startYear;
-    //NSInteger startDay, endDay = [CalendarInfo getCurrentDay];
-    for (int i = 0; i < 6; i++) {
-        [CalendarInfo incrementMonth:&endMonth :&endYear];
-        //[CalendarInfo decrementMonth:&startMonth :&startYear];
-    }
-    dataCache = [[DataCache alloc] init];
-    dataCache.monthCache = [DataManager buildCache:startMonth andYear:startYear
-                                           toMonth:endMonth andYear:endYear];
-    dataCache.lastUpdated = time(NULL);
-    return [dataCache monthCache];
-}
-+(NSMutableDictionary *) buildCache:(NSInteger)startMonth andYear:(NSInteger) startYear
-                            toMonth:(NSInteger) endMonth andYear:(NSInteger)endYear
-{
-    NSMutableDictionary *newMonthCache = [[NSMutableDictionary alloc] init];
-    NSMutableArray *events = (NSMutableArray *)[JsonParser loadEventsFromMonth:startMonth andYear:startYear
-                                                                         toMonth:endMonth andYear:endYear];
-    MonthOfEvents *currentMonth;
-    NSString *currentKey;
-    for(LCSCEvent *event in events)
-    {
-        int startYear = (int)event.startYear;
-        int startMonth = (int)event.startMonth;
-        int startDay = (int)event.startDay;
-        currentKey = [DataManager getIndexStr:startMonth :startYear];
-        currentMonth = [newMonthCache objectForKey:currentKey];
-        //NSLog(@"Building eventKey %@ monthDays %ld start day %ld", currentKey, (long)currentMonth.daysInMonth, (long)event.startDay);
-        if (currentMonth == nil)
-            currentMonth = [[MonthOfEvents alloc] initWithoutEvents:startMonth andYear:startYear];
-        [newMonthCache setObject:currentMonth forKey:currentKey];
-        [currentMonth addEvent:event toDay:startDay];
-    }
-    return newMonthCache;
-}
 +(NSString *)getIndexStr:(NSInteger)month :(NSInteger)year
 {
     return [NSString stringWithFormat:@"%ld-%ld", (long)year, (long)month];
