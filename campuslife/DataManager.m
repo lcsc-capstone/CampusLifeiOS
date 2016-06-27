@@ -84,7 +84,7 @@ void *timeHeartBeat()
     if (dataCache == nil)
     {
         [DataManager buildCache];
-        dataCache.lastUpdated = time(NULL);
+        //dataCache.lastUpdated = time(NULL);
         [self saveCache];
         [dataCacheLock unlock];
         return;
