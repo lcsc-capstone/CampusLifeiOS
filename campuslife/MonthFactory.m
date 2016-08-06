@@ -56,14 +56,27 @@
     
     if (endMonth == 0) endMonth = 12;
     
-    while(month_i <= endMonth && year_i <= endYear) {
-        NSString *indexStr = [MonthFactory getIndexStr:month_i :year_i];
-        //NSLog(indexStr);
-        MonthOfEvents *whatever = [monthCache objectForKey:indexStr];
-        [CalendarInfo incrementMonth:&month_i :&year_i];
-        if(whatever != nil)
-            [monthsOfEvents addObject:whatever];
+    for (int i = (int)startYear; i <= endYear; i++)
+    {
+        for(int j = (int)month_i; j <= ((i == endYear) ? endMonth : 12); j++)
+        {
+            NSString *indexStr = [MonthFactory getIndexStr:j :i];
+            MonthOfEvents *month = [monthCache objectForKey:indexStr];
+            if (month != nil)
+                [monthsOfEvents addObject:month];
+        }
+        month_i = 1;
     }
+    
+    
+    //while(month_i <= endMonth && year_i <= endYear) {
+    //    NSString *indexStr = [MonthFactory getIndexStr:month_i :year_i];
+    //    //NSLog(indexStr);
+    //    MonthOfEvents *whatever = [monthCache objectForKey:indexStr];
+    //    [CalendarInfo incrementMonth:&month_i :&year_i];
+    //    if(whatever != nil)
+    //        [monthsOfEvents addObject:whatever];
+    //}
     return monthsOfEvents;
 }
 
